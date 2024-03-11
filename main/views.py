@@ -11,7 +11,7 @@ def index(request):
 
 def about(request):
     context = {
-        'title': 'Home - Главная',
+        'title': 'Home - О Нас',
         'content1': 'О нас',
         'content2': 'Текст о том какой классный этот интернет магазин.',
         'footer': 'Copyright © Home Ilya Kaplun 2024'
@@ -21,7 +21,7 @@ def about(request):
 
 def delivery(request):
     context = {
-        'title': 'Home - Главная',
+        'title': 'Home - Доставка',
         'title_on_page': 'Доставка',
         'content1': 'Мы умеем доставлять товары.',
         'content2': 'Вы можете не оплачивать товары.',
@@ -32,7 +32,7 @@ def delivery(request):
 
 def contacts(request):
     context = {
-        'title': 'Home - Главная',
+        'title': 'Home - Контакты',
         'title_on_page': 'Контакты',
         'tel': 'phone: +7 985 654 32 23',
         'email': 'email: home@mail.ru',
