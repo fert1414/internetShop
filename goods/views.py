@@ -1,7 +1,12 @@
 from django.shortcuts import render
 
+from goods import models
 
 def catalog(request):
+
+    categories = models.Categories.objects.all()
+    products = models.Products.objects.all()
+
     context = {
         "title": "Home - Каталог",
         "goods": [
@@ -78,12 +83,18 @@ def catalog(request):
                 "price": 25.00,
             },
         ],
+        'categories': categories,
+        'products': products,
     }
     return render(request, 'goods/catalog.html', context)
 
 
 def product(request):
+
+    categories = models.Categories.objects.all()
+
     context = {
-        'title': 'Home - Продукт'
+        'title': 'Home - Продукт',
+        'categories': categories,
     }
     return render(request, 'goods/product.html', context)
